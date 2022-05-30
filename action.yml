@@ -1,0 +1,15 @@
+name: 'QA Needed'
+description: 'Adds a label to its associated issues that needs to be reopened for QA.'
+inputs:
+  github-token:
+    required: true
+    description: 'A GitHub access token with write access to the project.'
+  label:
+    required: true
+    description: 'Label to add to the associated issues that needs to be reopened.'
+  check-regexp:
+    required: true
+    description: 'A regular expression that parses the check from the pull request template.'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
